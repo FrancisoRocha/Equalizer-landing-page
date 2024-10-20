@@ -1,0 +1,45 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenido{
+    margin: 5rem 2rem;
+    @include m.tablet {  
+        margin: 12.8rem 4rem 6rem 4rem;
+    }
+    .title{
+        width: 33.5rem;
+        height: 12rem;
+        font-size: 4rem;
+
+        @include m.tablet {  
+            width: 46rem;
+            font-size: 6.4rem;
+            margin-top: -33rem;
+        }
+        
+        @include m.large-desktop {  
+            width: 92rem; 
+        }
+    }
+
+    .text{
+        width: 33.5rem;
+        margin-top: 1rem;
+        font-size: 1.6rem;
+
+        @include m.tablet {
+            width: 50.4rem;  
+            margin-top: 13rem;
+            font-size: 1.8rem;
+        }
+
+        @include m.desktop {  
+            width: 73.6rem;
+            margin-top: 13rem; 
+            font-size: 2rem;
+        }
+        @include m.large-desktop {
+            margin-top: 4rem; 
+        }
+    }
+}

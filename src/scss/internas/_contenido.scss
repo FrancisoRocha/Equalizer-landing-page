@@ -1,0 +1,240 @@
+/* CONTENIDO  */
+
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.imagenes-conte {
+    height: 100rem;
+    margin-top: 20rem;
+
+    @include m.tablet {
+        max-width: 100%;
+        padding: 20rem 5rem;
+        margin-top: -4rem;
+    }
+
+    @include m.desktop {
+        max-width: 100%;
+        padding: 20rem 15rem;
+    }
+
+    @include m.large-desktop {
+        max-width: 100%;
+        padding: 20rem 15rem;
+        margin-top: 6.4rem;
+    }
+
+    .cuadro {
+        height: 38rem;
+        background-color: v.$BtnOne;
+
+        @include m.tablet {
+            width: 100%;
+            height: 60rem;
+            border-radius: 1.2rem;
+        }
+
+        @include m.desktop {
+            width: 100%;
+            height: 60rem;
+            border-radius: 1.2rem;
+        }
+
+        @include m.large-desktop {
+            width: 100%;
+            height: 60rem;
+            border-radius: 1.2rem;
+        }
+
+        .img-pantter {
+            .back {
+                z-index: 1;
+            }
+
+            margin-left: 4rem;
+
+            @include m.tablet {
+                margin-left: 0;
+            }
+
+            @include m.large-desktop {
+                margin-left: 36.8rem;
+            }
+        }
+
+        .img-ilustration {
+            .ilustracion {
+                position: absolute;
+                z-index: 2;
+                width: 20.8rem;
+                height: 43rem;
+                margin-top: -58rem;
+                margin-left: 8rem;
+
+                @include m.tablet {
+                    width: 27.2rem;
+                    height: 55.6rem;
+                    margin-left: 5rem;
+                }
+
+                @include m.large-desktop {
+                    width: 31.2rem;
+                    height: 64.2rem;
+                    margin-left: 10rem;
+                }
+            }
+        }
+
+        .info {
+            position: absolute;
+            z-index: 3;
+            width: 100%;
+            height: 62.5rem;
+            background-color: v.$Orange;
+            margin-top: -9rem;
+            padding: 4.8rem 2rem;
+
+            @include m.tablet {
+                width: 35.6rem;
+                height: 62.8rem;
+                border-radius: 1.6rem;
+                margin-top: -40rem;
+                margin-left: 27rem;
+                padding: 4rem;
+            }
+
+            @include m.large-desktop {
+                width: 51.2rem;
+                height: 63.2rem;
+                border-radius: 1.6rem;
+                margin-top: -38rem;
+                margin-left: 54rem;
+                padding: 5.6rem;
+            }
+        }
+
+        .title-text {
+            color: v.$BtnOne;
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-top: 1rem;
+        }
+
+        .text-info {
+            width: 33.5rem;
+            height: 9.6rem;
+            color: v.$BtnOne;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.5;
+
+            @include m.tablet {
+                width: 26rem;
+                height: 16.2rem;
+                font-size: 1.8rem;
+            }
+
+            @include m.large-desktop {
+                width: 40rem;
+                height: 15rem;
+                font-size: 2rem;
+            }
+        }
+
+        .precio {
+            display: flex;
+            align-items: center;
+            color: v.$BtnOne;
+            font-size: 6.4rem;
+            line-height: 1.1;
+            font-weight: 700;
+            margin-top: 3rem;
+
+            span {
+                font-size: 2rem;
+                font-weight: 400;
+                line-height: 1.5;
+                margin-left: 2rem;
+            }
+        }
+
+        .botones {
+            margin: 0 auto;
+            @include m.tablet {
+                margin-top: -5rem;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                font-size: 1.8rem;
+                margin-top: 1.6rem;
+            }
+
+            .btn-one {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 33.5rem;
+                height: 6.4rem;
+                background-color: v.$BtnOne;
+                color: v.$Blanco;
+                border-radius: 1.2rem;
+                transition: all 300ms;
+
+                .apple {
+                    filter: brightness(0) invert(1);
+                    transition: all 300ms;
+                }
+
+                &:hover {
+                    background-color: v.$HoverCyan;
+                    color: v.$BtnOne;
+
+                    .apple {
+                        filter: brightness(0);
+                    }
+                }
+
+                @include m.tablet {
+                    width: 26rem;
+                    height: 6.4rem;
+                }
+
+                @include m.large-desktop {
+                    width: 40rem;
+                    height: 6.4rem;
+                }
+            }
+
+            .btn-two {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 33.5rem;
+                height: 6.4rem;
+                background-color: v.$Blanco;
+                color: v.$BtnOne;
+                border-radius: 1.2rem;
+                transition: all 300ms;
+
+                &:hover {
+                    background-color: v.$HoverYellow;
+                    color: v.$BtnOne;
+                }
+
+                @include m.tablet {
+                    width: 26rem;
+                    height: 6.4rem;
+                }
+
+                @include m.large-desktop {
+                    width: 40rem;
+                    height: 6.4rem;
+                }
+            }
+        }
+    }
+}

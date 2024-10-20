@@ -1,0 +1,61 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer {
+    padding: 4rem;
+
+    @include m.desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6.4rem;
+    }
+
+    .info-footer {
+        width: 33.5rem;
+        margin-top: 3rem;
+
+        @include m.tablet {
+            display: block;
+            width: 56rem;
+        }
+
+        @include m.large-desktop {
+            width: 60rem;
+        }
+
+        p {
+            color: v.$BtnOne;
+            font-size: 1.6rem;
+            margin: 0;
+
+            @include m.tablet {
+                width: 50rem;
+                font-size: 1.8rem;
+            }
+        }
+
+        .contact {
+            span {
+                font-weight: 700;
+                display: block;
+            }
+        }
+    }
+
+    .redes {
+        display: flex;
+        gap: 2rem;
+        margin-top: 3rem;
+
+
+
+        img {
+            transition: all 300ms;
+        }
+
+        a:hover img {
+            filter: brightness(0) saturate(100%) invert(62%) sepia(47%) saturate(6384%) hue-rotate(0deg) brightness(93%) contrast(101%);
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.header {
+    display: flex;
+    .logo {
+        padding: 6.4rem 3rem 0 3rem;
+    }
+
+    .pattern {
+        display: none;
+        overflow: hidden;
+
+        /* IMAGEN TAMAÑO TABLET */
+        @include m.tablet {
+            display: flex;
+        }
+
+        img {
+            margin-left: 30rem;
+            margin-top: -5rem;
+
+            /* IMAGEN TAMAÑO DESKTOP */
+            @include m.desktop {
+                margin-left: 51rem;
+            }
+
+            /* IMAGEN TAMAÑO PANTALLAS GRANDES */
+            @include m.large-desktop {
+                margin-left: 96rem;
+            }
+        }
+    }
+}

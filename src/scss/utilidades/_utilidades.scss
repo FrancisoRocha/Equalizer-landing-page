@@ -1,0 +1,45 @@
+@use 'base/variables' as v;
+
+.text-blanco{
+    color: v.$Blanco;
+}
+
+.text-black{
+    color: v.$BtnOne;
+}
+
+.br-radius-12{
+    border-radius: 1.2rem;
+}
+
+.br-radius-16{
+    border-radius: 1.6rem;
+}
+
+.regular{
+    font-weight: 400;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.line-height-1{
+    line-height: 1;
+}
+
+.line-height-1-1{
+    line-height: 1.1;
+}
+
+.line-height-1-5{
+    line-height: 1.5;
+}
+
+.line-height-1-8{
+    line-height: 1.8;
+}
+
+.left{
+    margin-left: 1rem;
+}
